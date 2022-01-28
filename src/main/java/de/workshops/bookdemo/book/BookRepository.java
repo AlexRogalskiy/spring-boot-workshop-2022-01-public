@@ -48,6 +48,11 @@ public class BookRepository {
         return book.getAuthor().contains(author);
     }
 
+    public Book save(Book book) {
+        this.books.add(book);
+        return book;
+    }
+
 
 
 }

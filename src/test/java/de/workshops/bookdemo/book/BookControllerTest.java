@@ -2,6 +2,7 @@ package de.workshops.bookdemo.book;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -10,6 +11,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.Matchers;
@@ -17,6 +19,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
@@ -33,7 +36,6 @@ public class BookControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
-    
     @Test
     void testGetAllBooksByMethodCall() {
         assertEquals(3, bookRestController.getAllBooks().size());
@@ -60,6 +62,35 @@ public class BookControllerTest {
         List<Book> books = objectMapper.readValue(jsonPayload, new TypeReference<>() {});
         assertEquals(3, books.size());
         assertEquals("Clean Code", books.get(1).getTitle());
+    }
+
+    @Test
+    void testCreateBook() throws Exception {
+        
+        objectMapper.configure(SerializationFeature.INDENT_OUTPUT, true);
+        
+        Book book = Book.builder()
+            .author("Autor")
+            .description("Desc")
+            .isbn("1234567890")
+            .title("Titel")
+            .build();
+
+        String jsonPayload = objectMapper.writeValueAsString(book);
+        mockMvc.perform(
+            post(BookRestController.REQUEST_URL)
+                .content(jsonPayload)
+                .contentType(MediaType.APPLICATION_JSON))
+
+            .andDo(print())
+            .andExpect(status().isOk());
+
+        assertEquals(4, bookRestController.getAllBooks().size());
+
+        mockMvc.perform(get(BookRestController.REQUEST_URL))
+            .andDo(print())
+            .andExpect(status().isOk());
+        
     }
 
     

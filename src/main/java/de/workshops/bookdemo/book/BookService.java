@@ -19,4 +19,8 @@ public class BookService {
     public Book searchBook(BookSearchRequest request) {
         return bookRepository.findBySearchRequest(request);
     }
+
+    public Book createBook(Book book) {
+        return bookRepository.save(book);
+    }
 }
