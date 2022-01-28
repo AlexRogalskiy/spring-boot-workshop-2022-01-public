@@ -1,4 +1,4 @@
-package de.workshops.bookdemo;
+package de.workshops.bookdemo.book;
 
 import lombok.Value;
 
