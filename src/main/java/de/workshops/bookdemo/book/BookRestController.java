@@ -12,10 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/books")
+@RequestMapping(BookRestController.REQUEST_URL)
 @RequiredArgsConstructor
 @Validated
 public class BookRestController {
+
+    public static final String REQUEST_URL = "/books";
 
     private final BookService bookService;
 
