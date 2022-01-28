@@ -55,6 +55,7 @@ public class BookControllerTest {
             .andExpect(status().isOk())
             .andReturn();       
         String jsonPayload = mvcResult.getResponse().getContentAsString();
+
         // Book[] books = objectMapper.readValue(jsonPayload, Book[].class);
         List<Book> books = objectMapper.readValue(jsonPayload, new TypeReference<>() {});
         assertEquals(3, books.size());
