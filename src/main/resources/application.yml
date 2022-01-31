@@ -4,7 +4,14 @@ logging:
     level:
         "[de.workshops]": debug
         "[org.springframework.boot.web]": debug
-    
+
+bookdemo:
+    int-param: 42
+    param2: Test
+    mail:
+        host: mailHost
+        port: 987
+
 ---
 spring:
     config:
