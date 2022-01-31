@@ -1,0 +1,75 @@
+31.01.2022 11:17:54.560 [] [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+31.01.2022 11:17:54.571 [] [restartedMain] INFO  d.w.bookdemo.BookdemoApplication - Starting BookdemoApplication using Java 11.0.11 on dominiks-pro.lancom.todo42.de with PID 73000 (/Users/Dominik/Library/Mobile Documents/com~apple~CloudDocs/workshops.de/2022-01-public/bookdemo/target/classes started by Dominik in /Users/Dominik/Library/Mobile Documents/com~apple~CloudDocs/workshops.de/2022-01-public/bookdemo)
+31.01.2022 11:17:54.574 [] [restartedMain] DEBUG d.w.bookdemo.BookdemoApplication - Running with Spring Boot v2.6.3, Spring v5.3.15
+31.01.2022 11:17:54.574 [] [restartedMain] INFO  d.w.bookdemo.BookdemoApplication - The following profiles are active: prod
+31.01.2022 11:17:54.653 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+31.01.2022 11:17:54.653 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+31.01.2022 11:17:54.654 [] [restartedMain] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1f310641
+31.01.2022 11:17:56.190 [] [restartedMain] DEBUG o.s.b.w.e.t.TomcatServletWebServerFactory - Code archive: /Users/Dominik/.m2/repository/org/springframework/boot/spring-boot/2.6.3/spring-boot-2.6.3.jar
+31.01.2022 11:17:56.191 [] [restartedMain] DEBUG o.s.b.w.e.t.TomcatServletWebServerFactory - Code archive: /Users/Dominik/.m2/repository/org/springframework/boot/spring-boot/2.6.3/spring-boot-2.6.3.jar
+31.01.2022 11:17:56.191 [] [restartedMain] DEBUG o.s.b.w.e.t.TomcatServletWebServerFactory - None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+31.01.2022 11:17:56.252 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8090 (http)
+31.01.2022 11:17:56.266 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+31.01.2022 11:17:56.267 [] [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+31.01.2022 11:17:56.267 [] [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+31.01.2022 11:17:56.378 [] [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+31.01.2022 11:17:56.378 [] [restartedMain] DEBUG o.s.b.w.s.c.ServletWebServerApplicationContext - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+31.01.2022 11:17:56.379 [] [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1725 ms
+31.01.2022 11:17:56.404 [] [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+31.01.2022 11:17:56.404 [] [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+31.01.2022 11:17:56.439 [] [restartedMain] DEBUG o.s.b.w.s.f.OrderedRequestContextFilter - Filter 'requestContextFilter' configured for use
+31.01.2022 11:17:56.440 [] [restartedMain] DEBUG o.s.b.w.s.f.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured for use
+31.01.2022 11:17:56.440 [] [restartedMain] DEBUG o.s.b.w.s.f.OrderedFormContentFilter - Filter 'formContentFilter' configured for use
+31.01.2022 11:17:57.880 [] [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+31.01.2022 11:17:57.914 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+31.01.2022 11:17:57.947 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8090 (http) with context path ''
+31.01.2022 11:17:57.970 [] [restartedMain] INFO  d.w.bookdemo.BookdemoApplication - Started BookdemoApplication in 4.208 seconds (JVM running for 5.295)
+31.01.2022 11:19:09.586 [] [restartedMain] INFO  d.w.bookdemo.BookdemoApplication - Starting BookdemoApplication using Java 11.0.11 on dominiks-pro.lancom.todo42.de with PID 73000 (/Users/Dominik/Library/Mobile Documents/com~apple~CloudDocs/workshops.de/2022-01-public/bookdemo/target/classes started by Dominik in /Users/Dominik/Library/Mobile Documents/com~apple~CloudDocs/workshops.de/2022-01-public/bookdemo)
+31.01.2022 11:19:09.586 [] [restartedMain] DEBUG d.w.bookdemo.BookdemoApplication - Running with Spring Boot v2.6.3, Spring v5.3.15
+31.01.2022 11:19:09.587 [] [restartedMain] INFO  d.w.bookdemo.BookdemoApplication - The following profiles are active: prod
+31.01.2022 11:19:09.592 [] [restartedMain] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7d2dfdb2
+31.01.2022 11:19:09.988 [] [restartedMain] DEBUG o.s.b.w.e.t.TomcatServletWebServerFactory - Code archive: /Users/Dominik/.m2/repository/org/springframework/boot/spring-boot/2.6.3/spring-boot-2.6.3.jar
+31.01.2022 11:19:09.989 [] [restartedMain] DEBUG o.s.b.w.e.t.TomcatServletWebServerFactory - Code archive: /Users/Dominik/.m2/repository/org/springframework/boot/spring-boot/2.6.3/spring-boot-2.6.3.jar
+31.01.2022 11:19:09.989 [] [restartedMain] DEBUG o.s.b.w.e.t.TomcatServletWebServerFactory - None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+31.01.2022 11:19:09.998 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8090 (http)
+31.01.2022 11:19:09.999 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+31.01.2022 11:19:09.999 [] [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+31.01.2022 11:19:09.999 [] [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+31.01.2022 11:19:10.016 [] [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+31.01.2022 11:19:10.016 [] [restartedMain] DEBUG o.s.b.w.s.c.ServletWebServerApplicationContext - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+31.01.2022 11:19:10.016 [] [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 424 ms
+31.01.2022 11:19:10.021 [] [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+31.01.2022 11:19:10.022 [] [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+31.01.2022 11:19:10.023 [] [restartedMain] DEBUG o.s.b.w.s.f.OrderedRequestContextFilter - Filter 'requestContextFilter' configured for use
+31.01.2022 11:19:10.023 [] [restartedMain] DEBUG o.s.b.w.s.f.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured for use
+31.01.2022 11:19:10.023 [] [restartedMain] DEBUG o.s.b.w.s.f.OrderedFormContentFilter - Filter 'formContentFilter' configured for use
+31.01.2022 11:19:10.444 [] [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+31.01.2022 11:19:10.454 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+31.01.2022 11:19:10.456 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8090 (http) with context path ''
+31.01.2022 11:19:10.461 [] [restartedMain] INFO  d.w.bookdemo.BookdemoApplication - Started BookdemoApplication in 0.944 seconds (JVM running for 77.791)
+31.01.2022 11:19:10.463 [] [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+31.01.2022 11:19:23.953 [] [Thread-11] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7d2dfdb2, started on Mon Jan 31 11:19:09 CET 2022
+31.01.2022 11:19:24.153 [] [restartedMain] INFO  d.w.bookdemo.BookdemoApplication - Starting BookdemoApplication using Java 11.0.11 on dominiks-pro.lancom.todo42.de with PID 73000 (/Users/Dominik/Library/Mobile Documents/com~apple~CloudDocs/workshops.de/2022-01-public/bookdemo/target/classes started by Dominik in /Users/Dominik/Library/Mobile Documents/com~apple~CloudDocs/workshops.de/2022-01-public/bookdemo)
+31.01.2022 11:19:24.153 [] [restartedMain] DEBUG d.w.bookdemo.BookdemoApplication - Running with Spring Boot v2.6.3, Spring v5.3.15
+31.01.2022 11:19:24.153 [] [restartedMain] INFO  d.w.bookdemo.BookdemoApplication - The following profiles are active: prod
+31.01.2022 11:19:24.157 [] [restartedMain] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7b063357
+31.01.2022 11:19:24.485 [] [restartedMain] DEBUG o.s.b.w.e.t.TomcatServletWebServerFactory - Code archive: /Users/Dominik/.m2/repository/org/springframework/boot/spring-boot/2.6.3/spring-boot-2.6.3.jar
+31.01.2022 11:19:24.486 [] [restartedMain] DEBUG o.s.b.w.e.t.TomcatServletWebServerFactory - Code archive: /Users/Dominik/.m2/repository/org/springframework/boot/spring-boot/2.6.3/spring-boot-2.6.3.jar
+31.01.2022 11:19:24.486 [] [restartedMain] DEBUG o.s.b.w.e.t.TomcatServletWebServerFactory - None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+31.01.2022 11:19:24.494 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+31.01.2022 11:19:24.495 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+31.01.2022 11:19:24.496 [] [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+31.01.2022 11:19:24.496 [] [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+31.01.2022 11:19:24.511 [] [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+31.01.2022 11:19:24.512 [] [restartedMain] DEBUG o.s.b.w.s.c.ServletWebServerApplicationContext - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+31.01.2022 11:19:24.512 [] [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 355 ms
+31.01.2022 11:19:24.516 [] [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+31.01.2022 11:19:24.516 [] [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+31.01.2022 11:19:24.517 [] [restartedMain] DEBUG o.s.b.w.s.f.OrderedRequestContextFilter - Filter 'requestContextFilter' configured for use
+31.01.2022 11:19:24.517 [] [restartedMain] DEBUG o.s.b.w.s.f.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured for use
+31.01.2022 11:19:24.518 [] [restartedMain] DEBUG o.s.b.w.s.f.OrderedFormContentFilter - Filter 'formContentFilter' configured for use
+31.01.2022 11:19:24.920 [] [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+31.01.2022 11:19:24.928 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+31.01.2022 11:19:24.929 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+31.01.2022 11:19:24.934 [] [restartedMain] INFO  d.w.bookdemo.BookdemoApplication - Started BookdemoApplication in 0.844 seconds (JVM running for 92.265)
+31.01.2022 11:19:24.935 [] [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged

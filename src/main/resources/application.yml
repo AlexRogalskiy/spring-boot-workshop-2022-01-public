@@ -1,5 +1,20 @@
+#debug: true
+
 logging:
     level:
         "[de.workshops]": debug
         "[org.springframework.boot.web]": debug
     
+---
+spring:
+    config:
+        activate:
+            on-profile:
+                - prod2
+
+server:
+  port: 8090
+
+springdoc:
+    api-docs:
+        enabled: false

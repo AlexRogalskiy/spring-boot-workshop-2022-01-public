@@ -1,5 +1,5 @@
 <configuration scan="true" scanPeriod="10 seconds" debug="false">
-    <springProfile name="default"><!-- no date, ansi colored, no file -->
+    <springProfile name="default, prod2"><!-- no date, ansi colored, no file -->
         <!-- switch from long to short debug log -->
         <property name="PATTERN"
                   value="%d{HH:mm:ss.SSS} [%X{user}] %highlight(%-5level) %highlight(%48.48logger) - %msg%n"/>
@@ -37,7 +37,7 @@
 
     <!-- For all those not explicitly defined below use this log level: -->
     <root level="INFO">
-        <springProfile name="default, jenkins">
+        <springProfile name="default, jenkins, prod2">
             <appender-ref ref="STDOUT"/>
         </springProfile>
         <springProfile name="prod">

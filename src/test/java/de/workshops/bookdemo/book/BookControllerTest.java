@@ -68,29 +68,31 @@ public class BookControllerTest {
     void testCreateBook() throws Exception {
         
         objectMapper.configure(SerializationFeature.INDENT_OUTPUT, true);
-        
         Book book = Book.builder()
             .author("Autor")
             .description("Desc")
             .isbn("1234567890")
             .title("Titel")
             .build();
-
         String jsonPayload = objectMapper.writeValueAsString(book);
+
         mockMvc.perform(
             post(BookRestController.REQUEST_URL)
                 .content(jsonPayload)
                 .contentType(MediaType.APPLICATION_JSON))
-
             .andDo(print())
-            .andExpect(status().isOk());
-
-        assertEquals(4, bookRestController.getAllBooks().size());
-
-        mockMvc.perform(get(BookRestController.REQUEST_URL))
+            .andExpect(status().isOk());            
+            
+        MvcResult result =  mockMvc.perform(get(BookRestController.REQUEST_URL))
             .andDo(print())
-            .andExpect(status().isOk());
+            .andExpect(status().isOk())
+            .andReturn();
         
+        String jsonResult = result.getResponse().getContentAsString();
+        List<Book> books = objectMapper.readValue(jsonResult, new TypeReference<>() {});
+        assertEquals(4, books.size());
+        assertEquals("Titel", books.get(3).getTitle());
+
     }
 
     
