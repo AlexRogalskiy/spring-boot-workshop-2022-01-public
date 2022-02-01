@@ -1,5 +1,6 @@
 package de.workshops.bookdemo.book;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -11,9 +12,13 @@ import lombok.RequiredArgsConstructor;
 public class BookService {
     
     private final BookRepository bookRepository;
+    private final BookJpaRepository bookJpaRepository;
 
 	public List<Book> loadAllBooks() {
-		return bookRepository.findAllBooks();
+		//return bookRepository.findAllBooks();
+		List<Book> result = new ArrayList<>();
+        bookJpaRepository.findAll().forEach(result::add);
+        return result;
 	}
 
     public Book searchBook(BookSearchRequest request) {
@@ -21,6 +26,7 @@ public class BookService {
     }
 
     public Book createBook(Book book) {
-        return bookRepository.save(book);
+        //return bookRepository.save(book);
+        return bookJpaRepository.save(book);
     }
 }

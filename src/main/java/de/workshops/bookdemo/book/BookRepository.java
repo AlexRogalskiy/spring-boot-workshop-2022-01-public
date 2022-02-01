@@ -9,6 +9,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.springframework.core.io.ResourceLoader;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import lombok.RequiredArgsConstructor;
@@ -19,6 +21,7 @@ public class BookRepository {
 
     private final ObjectMapper mapper;   
     private final ResourceLoader resourceLoader;
+    private final JdbcTemplate jdbcTemplate;
 
     private List<Book> books;
     
@@ -30,7 +33,8 @@ public class BookRepository {
     }
 
     public List<Book> findAllBooks() {
-        return this.books;
+        String sql = "SELECT * FROM books";      
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Book.class));
     }
 
     public Book findBySearchRequest(BookSearchRequest request) {
