@@ -29,6 +29,6 @@ public class Book {
     
     private String author;
     
-    private String isbn2;
+    private String isbn;
 
 }

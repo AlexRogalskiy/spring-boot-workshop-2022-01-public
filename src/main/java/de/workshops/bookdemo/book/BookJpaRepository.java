@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BookJpaRepository extends CrudRepository<Book, Long> {
     
-    public Book findByIsbn2(String isbn);
+    public Book findByIsbn(String isbn);
 
     @Query(value = "SELECT * from books", nativeQuery = true)
     public List<Book> specialNameXY();

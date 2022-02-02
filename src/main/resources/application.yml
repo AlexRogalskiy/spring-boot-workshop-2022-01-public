@@ -3,9 +3,10 @@
 logging:
     level:
         "[de.workshops]": debug
-        "[org.hibernate.SQL]": debug
-        "[org.hibernate.type]": trace
-        "[org.springframework.boot.web]": debug
+        #"[org.hibernate.SQL]": debug
+        #"[org.hibernate.type]": trace
+        #"[org.springframework.boot.web]": debug
+        #"[org.springframework.security]": debug
 
 bookdemo:
     int-param: 42
@@ -33,6 +34,23 @@ spring:
       enabled: true
       path: /h2-console
 
+  security:
+    user:
+        name: dominik
+        password: pass
+    oauth2:
+        client:
+            registration:
+                google:
+                # client mit redirect-uri *:8080 und *:8081
+                    client-id: 148971885543-co9dv22tjamh7amdonnqod69dsd721rp.apps.googleusercontent.com
+                    client-secret: mXAtT6Ze7M7mK_KCb5VEyJSY   
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
 
 ---
 spring:

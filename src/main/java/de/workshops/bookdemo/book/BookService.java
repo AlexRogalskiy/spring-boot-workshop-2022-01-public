@@ -6,9 +6,11 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class BookService {
     
     private final BookRepository bookRepository;
@@ -16,7 +18,8 @@ public class BookService {
 
 	public List<Book> loadAllBooks() {
 		//return bookRepository.findAllBooks();
-		List<Book> result = new ArrayList<>();
+		log.debug("hallo");
+        List<Book> result = new ArrayList<>();
         bookJpaRepository.findAll().forEach(result::add);
         return result;
 	}

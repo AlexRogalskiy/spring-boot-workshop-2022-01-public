@@ -19,14 +19,18 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.TestConfiguration;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.MediaType;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
 @SpringBootTest
 @AutoConfigureMockMvc
 public class BookControllerTest {
-    
+
     @Autowired
     private ObjectMapper objectMapper;
 
@@ -36,12 +40,19 @@ public class BookControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
+    @TestConfiguration
+    @Order(90)
+    static class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    }
+
     @Test
     void testGetAllBooksByMethodCall() {
         assertEquals(3, bookRestController.getAllBooks().size());
     }
 
     @Test
+    @WithMockUser(username = "dominik")
     void testGetAllBooksByMockMvc() throws Exception {
         mockMvc.perform(get((BookRestController.REQUEST_URL)))
             .andDo(print())

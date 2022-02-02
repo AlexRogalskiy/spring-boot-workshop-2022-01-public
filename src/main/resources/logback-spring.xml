@@ -1,5 +1,5 @@
 <configuration scan="true" scanPeriod="10 seconds" debug="false">
-    <springProfile name="default, prod2"><!-- no date, ansi colored, no file -->
+    <springProfile name="default, prod"><!-- no date, ansi colored, no file -->
         <!-- switch from long to short debug log -->
         <property name="PATTERN"
                   value="%d{HH:mm:ss.SSS} [%X{user}] %highlight(%-5level) %highlight(%48.48logger) - %msg%n"/>
